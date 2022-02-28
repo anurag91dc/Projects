@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "bd9515e5-2f7c-4159-989a-c5a72bdc386b",
+		"name": "Prod-sparkcognitioncalcserverless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/Calc",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "6vgquX8tLZ6Byy8zI1Mzy1zTw3JMP9hA4DMT2qoT",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "x-api-key",
+							"type": "string"
+						},
+						{
+							"key": "in",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/Calc?Num1=2&Num2=5&Operator=-",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"Calc"
+					],
+					"query": [
+						{
+							"key": "Num1",
+							"value": "2",
+							"description": "(Required) "
+						},
+						{
+							"key": "Num2",
+							"value": "5",
+							"description": "(Required) "
+						},
+						{
+							"key": "Operator",
+							"value": "-",
+							"description": "(Required) "
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "https://6iqyibt6lc.execute-api.us-east-1.amazonaws.com/Prod/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"protocol": "https",
+							"host": [
+								"6iqyibt6lc",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"Prod",
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "400 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "401 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "403 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "404 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "422 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "500 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "502 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "Bad Gateway",
+					"code": 502,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "504 response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"description": "Added as a part of security scheme: apikey",
+								"key": "x-api-key",
+								"value": "<API Key>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/Calc?Num1=esse id&Num2=esse id&Operator=esse id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Calc"
+							],
+							"query": [
+								{
+									"key": "Num1",
+									"value": "esse id"
+								},
+								{
+									"key": "Num2",
+									"value": "esse id"
+								},
+								{
+									"key": "Operator",
+									"value": "esse id"
+								}
+							]
+						}
+					},
+					"status": "Gateway Timeout",
+					"code": 504,
+					"_postman_previewlanguage": "text",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain"
+						}
+					],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://6iqyibt6lc.execute-api.us-east-1.amazonaws.com/Prod",
+			"type": "string"
+		}
+	]
+}
