@@ -4,7 +4,7 @@
     3) Run the command serverless deploy on the the same folder
     4) You should receive a random URL and API key.  
 
-## Steps to call this API from Postman - 
+## Steps to call this API from Postman - (You can also import the Postman collection file in this Repo to get a better idea about the API)
     1) Select GET method and use the Random URL generated -  "https://6iqyibt6lc.execute-api.us-east-1.amazonaws.com/Prod" for example.
     2) Add API Path to the URL string - "/Calc"
     3) Add query Parameters - ?Num1=< First Number >&Operator=< + or - or * or / >&Num2=< Second Number >
