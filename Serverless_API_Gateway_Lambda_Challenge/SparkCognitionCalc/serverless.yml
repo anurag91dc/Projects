@@ -1,0 +1,76 @@
+# Welcome to Serverless!
+#
+# This file is the main config file for your service.
+# It's very minimal at this point and uses default values.
+# You can always add more config options for more control.
+# We've included some commented out config examples here.
+# Just uncomment any of them to get that config option.
+#
+# For full config options, check the docs:
+#    docs.serverless.com
+#
+# Happy Coding!
+configValidationMode: error
+service: sparkcognitioncalcserverless
+# description: "API for Spark Cognition API Challenge"
+# app and org for use with dashboard.serverless.com
+app: sparkcognitioncalcserverless
+#org: your-org-name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+frameworkVersion: '3'
+custom:
+  documentation:
+    models:
+      -
+        name: "Event"
+        description: "Model for event"
+        contentType: "application/json"
+        schema: ${file(template.json)}
+
+provider:
+  name: aws
+  stage: Prod
+  runtime: python3.8
+  endpointType: regional
+  apiGateway:
+    apiKeySourceType: HEADER
+    apiKeys:
+      - SCKey
+    usagePlan:
+      quota:
+        limit: 1000
+        offset: 0
+        period: DAY
+      throttle:
+        burstLimit: 50
+        rateLimit: 100
+    
+
+functions:
+  Calc_handler:
+    handler: handler.Calc_handler
+    events:
+     - http:
+        integration: lambda
+        path: /Calc
+        method: get
+        private: true
+        request:
+          template: 
+            application/json: |
+              {
+                "Num1":  "$input.params('Num1')",
+                "Num2":  "$input.params('Num2')", 
+                "Operator": "$input.params('Operator')"
+              }
+          parameters:
+            querystrings:
+              Num1: true
+              Num2: true
+              Operator: true
+        response:
+          headers:
+            Content-Type: "'text/html'"
+          
