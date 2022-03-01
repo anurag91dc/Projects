@@ -20,15 +20,6 @@ app: sparkcognitioncalcserverless
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
 frameworkVersion: '3'
-custom:
-  documentation:
-    models:
-      -
-        name: "Event"
-        description: "Model for event"
-        contentType: "application/json"
-        schema: ${file(template.json)}
-
 provider:
   name: aws
   stage: Prod
